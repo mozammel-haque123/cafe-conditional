@@ -11,8 +11,14 @@ function App() {
   const [MarkasRead ,setMarkasRead] = useState(0)
 
 const handlaeBookMark = (blog)=>{
-  const newBookMark = [...bookmark ,blog]
+  const isBoommark = bookmark.find((p)=> p.id == blog.id)
+  if(isBoommark){
+    alert('dabul click')
+  }else{
+     const newBookMark = [...bookmark ,blog]
   setbookMark(newBookMark)
+  }
+ 
 }
 
 const handaleMarkasRead = (time,id)=>{
